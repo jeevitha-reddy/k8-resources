@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: label-demo
+  labels:   # to select other resources
+    course: DevOps
+    Trainer: "Shiva"
+spec:
+# list of containers
+  containers:
+  - name: hello-pod
+    image: nginx    # it is pulling from docker hub
+    ports:
+    - containerPort: 80
